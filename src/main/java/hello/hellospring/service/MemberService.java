@@ -5,10 +5,12 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
 //@Service
+@Transactional
 public class MemberService {
 // 클래스에서 cmd + shft + t 누르면 자동으로 테스트 파일 생성
     private final MemberRepository memberRepository;
